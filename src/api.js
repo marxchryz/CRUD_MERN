@@ -7,3 +7,6 @@ export const createTodo = (todo) =>
     headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
     body: JSON.stringify(todo),
   });
+
+export const getTodo = (id) =>
+  fetch(`http://localhost:4000/${id}`).then((res) => res.json());
